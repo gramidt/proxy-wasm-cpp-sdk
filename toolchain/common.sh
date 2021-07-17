@@ -28,6 +28,7 @@ export SPIDERMONKEY_ENGINE=''
 export EM_EXCLUSIVE_CACHE_ACCESS=1
 export EMCC_SKIP_SANITY_CHECK=1
 export EMCC_WASM_BACKEND=1
+export EMCC_FORCE_STDLIBS=1
 
 #echo "$(pwd)/external/emscripten_toolchain/emsdk_env.sh"
 #realpath "external/emscripten_toolchain/emsdk_env.sh"
