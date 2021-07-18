@@ -19,12 +19,12 @@ def wasm_dependencies():
         name = "emscripten_toolchain",
         build_file = "@proxy_wasm_cpp_sdk//:emscripten-toolchain.BUILD",
         patch_cmds = [
-            "./emsdk install 2.0.7",
-            "./emsdk activate --embedded 2.0.7",
+            "./emsdk install 2.0.25",
+            "./emsdk activate --embedded 2.0.25",
         ],
-        strip_prefix = "emsdk-2.0.7",
-        url = "https://github.com/emscripten-core/emsdk/archive/2.0.7.tar.gz",
-        sha256 = "ce7a5c76e8b425aca874cea329fd9ac44b203b777053453b6a37b4496c5ce34f"
+        strip_prefix = "emsdk-2.0.25",
+        url = "https://github.com/emscripten-core/emsdk/archive/2.0.25.tar.gz",
+        sha256 = "94fbab5df99c81729b0cc9c810313a7b03f47367de7c7d80803f136bf715b2db"
     )
 
     _http_archive(
