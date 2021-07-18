@@ -131,7 +131,7 @@ def _impl(ctx):
                 actions = [ACTION_NAMES.c_compile, ACTION_NAMES.cpp_compile],
                 flag_groups = [
                     flag_group(
-                        flags = ["-O0", "-ffunction-sections", "-fdata-sections", "-flto"],
+                        flags = ["-O0", "-ffunction-sections", "-fdata-sections", "-flto", "-s", "FORCE_FILESYSTEM=1"],
                     ),
                 ],
             ),
@@ -141,7 +141,7 @@ def _impl(ctx):
                     ACTION_NAMES.cpp_link_nodeps_dynamic_library,
                     ACTION_NAMES.cpp_link_executable,
                 ],
-                flag_groups = [flag_group(flags = ["-O0", "-Wl,--gc-sections", "-flto"])],
+                flag_groups = [flag_group(flags = ["-O0", "-Wl,--gc-sections", "-flto", "-s", "FORCE_FILESYSTEM=1"])],
             ),
         ],
     )
