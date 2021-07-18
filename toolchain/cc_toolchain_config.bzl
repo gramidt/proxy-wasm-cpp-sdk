@@ -79,9 +79,7 @@ def _impl(ctx):
                     flag_group(
                         flags = [
                             "-isystem",
-                            "external/emscripten_toolchain/upstream/emscripten/system/include/libcxx",
-                            "-isystem",
-                            "external/emscripten_toolchain/upstream/emscripten/system/include/libc",
+                            "external/emscripten_toolchain/upstream/emscripten/system/include",
                         ],
                     ),
                 ],
@@ -161,8 +159,7 @@ def _impl(ctx):
         # we just need to include them here so that bazel doesn't complain on
         # "this rule is missing dependency declarations for the following files included".
         cxx_builtin_include_directories = [
-            "external/emscripten_toolchain/upstream/emscripten/system/include/libcxx",
-            "external/emscripten_toolchain/upstream/emscripten/system/include/libc",
+            "external/emscripten_toolchain/upstream/emscripten/system/include",
         ],
         features = [cxx17_feature, no_canonical_prefixes_feature, opt_feature],
     )
